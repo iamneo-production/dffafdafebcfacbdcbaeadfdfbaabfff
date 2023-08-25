@@ -18,5 +18,9 @@ export class StudentService {
     return this.http.post<any>(`${this.baseUrl}/students`, student);
   }
 
+  getStudentById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/students/${id}`);
+  }
+
   // Implement methods to add, update, and delete students
 }

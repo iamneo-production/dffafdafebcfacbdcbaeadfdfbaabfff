@@ -8,13 +8,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StudentAddComponent } from './student-add/student-add.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentDetailsComponent } from './student-details/student-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     NavbarComponent,
-    StudentAddComponent
+    StudentAddComponent,
+    StudentDetailsComponent
   ],
   imports: [
     BrowserModule,
