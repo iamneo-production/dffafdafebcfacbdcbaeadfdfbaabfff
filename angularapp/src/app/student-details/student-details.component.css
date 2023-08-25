@@ -1,0 +1,28 @@
+/* student-details.component.css */
+
+h2 {
+    margin-bottom: 20px;
+  }
+  
+  div {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  /* Optional: Customize the appearance of the details section */
+  /* Example: Adding space between details */
+  div + div {
+    margin-top: 20px;
+  }
+  
