@@ -7,6 +7,7 @@ import { StudentListComponent } from './student-list/student-list.component';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { StudentAddComponent } from './student-add/student-add.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { StudentAddComponent } from './student-add/student-add.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+
     FormsModule
   ],
   providers: [],
