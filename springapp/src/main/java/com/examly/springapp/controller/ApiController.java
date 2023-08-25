@@ -22,21 +22,21 @@ public class ApiController {
     @Autowired
     private Studentservice service;
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
     @PostMapping("/addStudent")
     public boolean addStudent(@RequestBody Student student)
     {
         return service.addStudent(student);
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
     @GetMapping("/getAllStudent")
     public List <Student> getAllStudents()
     {
         return service.getAllStudents();
     }
 
-    @CrossOrigin(origins = "http://localhost:3000")
+    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
     @GetMapping("/getById/{id}")
     
         public Optional<Student> getById(@PathVariable int id)
