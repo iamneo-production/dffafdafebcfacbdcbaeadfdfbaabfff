@@ -1,12 +1,13 @@
 package com.examly.springapp.model;
 
+import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
 public class Student {
     @Id
-    private int id;
+   private int id;
     private String name;
     private String department;
     private String phonenumber;
