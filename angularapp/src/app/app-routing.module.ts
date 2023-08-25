@@ -5,7 +5,7 @@ import { StudentAddComponent } from './student-add/student-add.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 
 const routes: Routes = [
-  { path: ' ', component: StudentListComponent },
+  { path: '', component: StudentListComponent },
   { path: 'add', component: StudentAddComponent },
   { path: 'details/:id', component: StudentDetailsComponent } // New route for student details
 
