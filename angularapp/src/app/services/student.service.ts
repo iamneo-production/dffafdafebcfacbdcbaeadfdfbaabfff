@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,10 @@ export class StudentService {
 
   getStudents() {
     return this.http.get<any[]>(`${this.baseUrl}/students`);
+  }
+
+  createStudent(student: any): Observable<any> {
+    return this.http.post<any>(`${this.baseUrl}/students`, student);
   }
 
   // Implement methods to add, update, and delete students
