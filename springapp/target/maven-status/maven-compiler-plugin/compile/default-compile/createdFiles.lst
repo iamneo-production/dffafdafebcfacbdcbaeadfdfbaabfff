@@ -1,0 +1,5 @@
+com/examly/springapp/service/Studentservice.class
+com/examly/springapp/controller/ApiController.class
+com/examly/springapp/model/Student.class
+com/examly/springapp/configuration/CorsConfiguartion.class
+com/examly/springapp/repository/StudentRepo.class

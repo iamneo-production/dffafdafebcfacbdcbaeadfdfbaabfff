@@ -11,5 +11,7 @@
     <td>{{ student.name }}</td>
     <td>{{ student.department }}</td>
     <td>{{ student.phonenumber }}</td>
+    <td><a [routerLink]="['/details', student.id]">Details</a></td>
+
   </tr>
 </table>
