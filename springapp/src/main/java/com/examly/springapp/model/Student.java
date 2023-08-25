@@ -1,18 +1,19 @@
 package com.examly.springapp.model;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Entity
 public class Student {
     @Id
-   private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
     private String name;
     private String department;
     private String phonenumber;
 
-    
     public Student(int id, String name, String department, String phonenumber) {
         this.id = id;
         this.name = name;
@@ -20,12 +21,8 @@ public class Student {
         this.phonenumber = phonenumber;
     }
 
-
-    
     public Student() {
     }
-
-
 
     public int getId() {
         return id;
@@ -51,7 +48,4 @@ public class Student {
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
-
-    
-    
 }

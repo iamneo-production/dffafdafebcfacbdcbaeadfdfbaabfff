@@ -30,12 +30,12 @@ export class StudentListComponent implements OnInit {
   ];
 
   constructor(
-    // private studentService: StudentService
+    private studentService: StudentService
     ) {}
 
   ngOnInit() : void {
-    // this.studentService.getStudents().subscribe(data => {
-    //   this.students = data;
-    // });
+    this.studentService.getStudents().subscribe(data => {
+      this.students = data;
+    });
   }
 }
