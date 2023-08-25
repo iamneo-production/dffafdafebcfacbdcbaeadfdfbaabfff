@@ -24,7 +24,7 @@ h2 {
   
   input[type="text"],
   select {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
@@ -57,7 +57,7 @@ h2 {
   }
 
   input[type="tel"] {
-    width: 100%;
+    width: 90%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 3px;
