@@ -28,6 +28,8 @@ export class StudentAddComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log('Form Valid:', this.addForm.valid);
+  console.log('Form Values:', this.addForm.value);
     this.studentService.createStudent(this.addForm.value).subscribe(() => {
       this.router.navigate(['/']);
     });
