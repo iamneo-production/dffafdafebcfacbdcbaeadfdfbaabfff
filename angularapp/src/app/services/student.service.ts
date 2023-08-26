@@ -15,7 +15,7 @@ export class StudentService {
   }
 
   createStudent(student: any): Observable<any> {
-    student.id=10;
+    student.id=0;
 console.log(student)
     return this.http.post<any>(`${this.baseUrl}/addStudent`, student);
   }
