@@ -57,19 +57,20 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  fit('should retrieve players from the backend', (done: DoneFn) => {
+  fit('should retrieve students from the backend', (done: DoneFn) => {
     service.getStudentById(1).subscribe(
-      (players: Student[]) => {
-        console.log(players);
-        console.log(players.length)
-        expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
+      (student: Student) => {
+        console.log('Response:', student); // Log the received student data
+        expect(student).toBeDefined(); // Check if student data is received
         done();
       },
       (error: any) => {
-        fail('Failed to retrieve teams: ' + JSON.stringify(error));
+        console.error('Error:', error); // Log the error for debugging
+        fail('Failed to retrieve student: ' + JSON.stringify(error));
       }
     );
   });
+
 
 
 
