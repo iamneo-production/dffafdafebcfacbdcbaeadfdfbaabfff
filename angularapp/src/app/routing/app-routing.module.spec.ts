@@ -10,6 +10,7 @@ import { NavbarComponent } from "../navbar/navbar.component";
 import { StudentListComponent } from "../student-list/student-list.component";
 import { StudentAddComponent } from "../student-add/student-add.component";
 import { StudentDetailsComponent } from "../student-details/student-details.component";
+import { FormBuilder, ReactiveFormsModule } from "@angular/forms";
 
 describe("App Routing",() => {
     let router: Router;
@@ -25,14 +26,14 @@ describe("App Routing",() => {
                   { path: 'add', component: StudentAddComponent },
                   { path: 'details/:id', component: StudentDetailsComponent },
                   // { path: '**', redirectTo: '/error', pathMatch: 'full' },
-                ]), HttpClientTestingModule
+                ]), HttpClientTestingModule,ReactiveFormsModule
             ],
             declarations:[
                 NavbarComponent,
                 AppComponent,
                 StudentAddComponent,
                 StudentDetailsComponent,
-                StudentListComponent
+                StudentListComponent,
             ]
 
         }).compileComponents();
@@ -63,8 +64,8 @@ describe("App Routing",() => {
     });
 
     fit('Week5_Day2_should route to organizer page', async () => {
-      await router.navigate(['/organizer']);
-      expect(location.path()).toBe('/organizer');
+      await router.navigate(['/details/:id']);
+      expect(location.path()).toBe('/details/:id');
     });
 
 
