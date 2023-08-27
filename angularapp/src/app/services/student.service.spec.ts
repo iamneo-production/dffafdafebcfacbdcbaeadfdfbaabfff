@@ -40,11 +40,15 @@ describe('AdminService Integration Tests', () => {
   });
 
   fit('should create a new team via the backend', (done: DoneFn) => {
-    const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+    const newStudent: Student = {
+      name: 'demo',
+      department: 'demo',
+      phonenumber: "7894561230"
+    };
 
-    service.createTeam(newTeam).subscribe(
-      (createdTeam: Team) => {
-        expect(createdTeam).toEqual(newTeam);
+    service.createStudent(newStudent).subscribe(
+      (createdTeam: Student) => {
+        expect(createdTeam).toEqual(newStudent);
         done();
       },
       (error: any) => {
@@ -53,18 +57,18 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  // fit('should retrieve players from the backend', (done: DoneFn) => {
-  //   service.getPlayers().subscribe(
-  //     (players: Player[]) => {
-  //       console.log(players)
-  //       expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
-  //       done();
-  //     },
-  //     (error: any) => {
-  //       fail('Failed to retrieve teams: ' + JSON.stringify(error));
-  //     }
-  //   );
-  // });
+  fit('should retrieve players from the backend', (done: DoneFn) => {
+    service.getStudentById().subscribe(
+      (players: Student[]) => {
+        console.log(players)
+        expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
+        done();
+      },
+      (error: any) => {
+        fail('Failed to retrieve teams: ' + JSON.stringify(error));
+      }
+    );
+  });
 
 
 
