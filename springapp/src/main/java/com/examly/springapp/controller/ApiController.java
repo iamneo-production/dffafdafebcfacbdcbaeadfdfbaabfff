@@ -22,24 +22,24 @@ public class ApiController {
     @Autowired
     private Studentservice service;
 
-    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
-    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
+    @CrossOrigin(origins = {"https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io", "http://localhost:9876"})
+    // @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @PostMapping("/addStudent")
     public boolean addStudent(@RequestBody Student student)
     {
         return service.addStudent(student);
     }
 
-    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
-    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
+    @CrossOrigin(origins = {"https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io", "http://localhost:9876"})
+    // @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @GetMapping("/getAllStudent")
     public List <Student> getAllStudents()
     {
         return service.getAllStudents();
     }
 
-    @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
-    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
+    @CrossOrigin(origins = {"https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io", "http://localhost:9876"})
+    // @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @GetMapping("/getById/{id}")
     
         public Optional<Student> getById(@PathVariable int id)

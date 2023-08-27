@@ -47,14 +47,12 @@ describe('AdminService Integration Tests', () => {
     };
 
     service.createStudent(newStudent).subscribe(
-      (createdTeam: Student) => {
-        console.log(createdTeam);
-var con=true;
-        expect(createdTeam).toEqual(con);
+      (createdStudent: boolean) => {
+        expect(createdStudent).toBe(true); // Check if the creation was successful
         done();
       },
       (error: any) => {
-        fail('Failed to create team: ' + JSON.stringify(error));
+        fail('Failed to create student: ' + JSON.stringify(error));
       }
     );
   });
