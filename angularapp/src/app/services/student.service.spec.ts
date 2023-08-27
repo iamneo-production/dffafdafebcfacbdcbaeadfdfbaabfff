@@ -48,6 +48,7 @@ describe('AdminService Integration Tests', () => {
 
     service.createStudent(newStudent).subscribe(
       (createdTeam: Student) => {
+console.log(createdTeam);
         expect(createdTeam).toEqual(newStudent);
         done();
       },
