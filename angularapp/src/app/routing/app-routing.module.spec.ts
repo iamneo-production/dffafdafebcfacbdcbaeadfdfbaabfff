@@ -53,17 +53,17 @@ describe("App Routing",() => {
     //     })
     // }))
 
-    fit('Week5_Day1_should route to Student-List by default', async () => {
+    fit('Test_should_route_to_Student_List_by_default', async () => {
       await router.initialNavigation();
       expect(location.path()).toBe('/');
     });
 
-    fit('Week5_Day1_should route to admin page', async () => {
+    fit('Test_should_route_to_add_page', async () => {
       await router.navigate(['/add']);
       expect(location.path()).toBe('/add');
     });
 
-    fit('Week5_Day2_should route to organizer page', async () => {
+    fit('Test_should_route_to_details_page_by_id', async () => {
       await router.navigate(['/details/:id']);
       expect(location.path()).toBe('/details/:id');
     });
