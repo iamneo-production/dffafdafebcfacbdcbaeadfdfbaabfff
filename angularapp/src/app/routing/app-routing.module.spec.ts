@@ -53,7 +53,7 @@ describe("App Routing",() => {
     //     })
     // }))
 
-    fit('Week5_Day1_should route to home page by default', async () => {
+    fit('Week5_Day1_should route to Student-List by default', async () => {
       await router.initialNavigation();
       expect(location.path()).toBe('/');
     });
