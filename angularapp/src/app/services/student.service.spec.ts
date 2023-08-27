@@ -60,7 +60,8 @@ describe('AdminService Integration Tests', () => {
   fit('should retrieve players from the backend', (done: DoneFn) => {
     service.getStudentById(1).subscribe(
       (players: Student[]) => {
-        console.log(players)
+        console.log(players);
+        console.log(players.length)
         expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
         done();
       },
