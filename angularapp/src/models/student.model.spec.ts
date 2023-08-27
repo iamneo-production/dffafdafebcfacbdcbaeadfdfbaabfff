@@ -1,7 +1,7 @@
 import { Student } from "./student.model";
 
 describe('Student Models', () => {
-  fit('create_Student_instance', () => {
+  fit('Test_create_Student_instance', () => {
     const student: Student = {
       name: 'demo',
       department: 'demo',

@@ -22,11 +22,11 @@ describe('AdminService Integration Tests', () => {
   //   httpMock.verify(); // Verify that there are no open requests after each test
   // });
 
-  fit('should be created', () => {
+  fit('Test_should_create_service', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should retrieve teams from the backend', (done: DoneFn) => {
+  fit('Test_should_retrieve_Students_from_the_backend', (done: DoneFn) => {
     service.getStudents().subscribe(
       (students: Student[]) => {
         console.log(students)
@@ -39,7 +39,7 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  fit('should create a new team via the backend', (done: DoneFn) => {
+  fit('Test_should create a new team via the backend', (done: DoneFn) => {
     const newStudent: Student = {
       name: 'demo',
       department: 'demo',
