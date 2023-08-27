@@ -1,19 +1,18 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientModule } from '@angular/common/http';
-import { StudentService }from './student.service'
-import { Team } from '../../models/team.model';
-import { Player } from '../../models/player.model';
+import { StudentService } from './student.service';
 import { HttpTestingController } from '@angular/common/http/testing';
+import { Student } from 'src/models/student.model';
 
 describe('AdminService Integration Tests', () => {
-  let service: AdminService;
+  let service: StudentService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientModule],
-      providers: [AdminService]
+      providers: [StudentService]
     });
-    service = TestBed.inject(AdminService);
+    service = TestBed.inject(StudentService);
     jasmine.DEFAULT_TIMEOUT_INTERVAL = 3000;
 
   });
@@ -28,10 +27,10 @@ describe('AdminService Integration Tests', () => {
   });
 
   fit('should retrieve teams from the backend', (done: DoneFn) => {
-    service.getTeams().subscribe(
-      (teams: Team[]) => {
-        console.log(teams)
-        expect(teams.length).toBeGreaterThan(0); // Check if any teams are retrieved
+    service.getStudents().subscribe(
+      (students: Student[]) => {
+        console.log(students)
+        expect(students.length).toBeGreaterThan(0); // Check if any teams are retrieved
         done();
       },
       (error: any) => {
@@ -40,32 +39,32 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  fit('should create a new team via the backend', (done: DoneFn) => {
-    const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+  // fit('should create a new team via the backend', (done: DoneFn) => {
+  //   const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
-    service.createTeam(newTeam).subscribe(
-      (createdTeam: Team) => {
-        expect(createdTeam).toEqual(newTeam);
-        done();
-      },
-      (error: any) => {
-        fail('Failed to create team: ' + JSON.stringify(error));
-      }
-    );
-  });
+  //   service.createTeam(newTeam).subscribe(
+  //     (createdTeam: Team) => {
+  //       expect(createdTeam).toEqual(newTeam);
+  //       done();
+  //     },
+  //     (error: any) => {
+  //       fail('Failed to create team: ' + JSON.stringify(error));
+  //     }
+  //   );
+  // });
 
-  fit('should retrieve players from the backend', (done: DoneFn) => {
-    service.getPlayers().subscribe(
-      (players: Player[]) => {
-        console.log(players)
-        expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
-        done();
-      },
-      (error: any) => {
-        fail('Failed to retrieve teams: ' + JSON.stringify(error));
-      }
-    );
-  });
+  // fit('should retrieve players from the backend', (done: DoneFn) => {
+  //   service.getPlayers().subscribe(
+  //     (players: Player[]) => {
+  //       console.log(players)
+  //       expect(players.length).toBeGreaterThan(0); // Check if any teams are retrieved
+  //       done();
+  //     },
+  //     (error: any) => {
+  //       fail('Failed to retrieve teams: ' + JSON.stringify(error));
+  //     }
+  //   );
+  // });
 
 
 
