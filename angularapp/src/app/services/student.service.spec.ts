@@ -39,19 +39,19 @@ describe('AdminService Integration Tests', () => {
     );
   });
 
-  // fit('should create a new team via the backend', (done: DoneFn) => {
-  //   const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
+  fit('should create a new team via the backend', (done: DoneFn) => {
+    const newTeam: Team = { id: 3, name: 'New Team', maximumBudget: 50000 };
 
-  //   service.createTeam(newTeam).subscribe(
-  //     (createdTeam: Team) => {
-  //       expect(createdTeam).toEqual(newTeam);
-  //       done();
-  //     },
-  //     (error: any) => {
-  //       fail('Failed to create team: ' + JSON.stringify(error));
-  //     }
-  //   );
-  // });
+    service.createTeam(newTeam).subscribe(
+      (createdTeam: Team) => {
+        expect(createdTeam).toEqual(newTeam);
+        done();
+      },
+      (error: any) => {
+        fail('Failed to create team: ' + JSON.stringify(error));
+      }
+    );
+  });
 
   // fit('should retrieve players from the backend', (done: DoneFn) => {
   //   service.getPlayers().subscribe(

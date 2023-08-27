@@ -23,6 +23,7 @@ public class ApiController {
     private Studentservice service;
 
     @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
+    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @PostMapping("/addStudent")
     public boolean addStudent(@RequestBody Student student)
     {
@@ -30,6 +31,7 @@ public class ApiController {
     }
 
     @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
+    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @GetMapping("/getAllStudent")
     public List <Student> getAllStudents()
     {
@@ -37,6 +39,7 @@ public class ApiController {
     }
 
     @CrossOrigin(origins = "https://8081-dffafdafebcfacbdcbaeadfdfbaabfff.premiumproject.examly.io")
+    @CrossOrigin(origins = "http://localhost:9876") // Adjust the port as needed
     @GetMapping("/getById/{id}")
     
         public Optional<Student> getById(@PathVariable int id)
