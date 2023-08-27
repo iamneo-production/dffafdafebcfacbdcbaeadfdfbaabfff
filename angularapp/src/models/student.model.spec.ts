@@ -1,23 +1,25 @@
 import { Student } from "./student.model";
 
-describe('Team Models', () => {
-  fit('Week4_Day3_create_Team_instance', () => {
-    const team: Team = {
-      name: 'Team A',
-      maximumBudget: 1000000
+describe('Student Models', () => {
+  fit('create_Student_instance', () => {
+    const student: Student = {
+      name: 'demo',
+      department: 'demo',
+      phonenumber: "7894561230"
     };
-    expect(team).toBeTruthy();
-    expect(team.name).toBe('Team A');
-    expect(team.maximumBudget).toBe(1000000);
+    expect(student).toBeTruthy();
+    expect(student.name).toBe('demo');
+    expect(student.department).toBe("demo");
+    expect(student.phonenumber).toBe("7894561230");
   });
 
-  // it('Week4_Day3_should_create_Team_instance_with_default_values', () => {
-  //   const team: Team = {
-  //     name: 'Team B',
+  // it('Week4_Day3_should_create_sttudent_instance_with_default_values', () => {
+  //   const sttudent: sttudent = {
+  //     name: 'sttudent B',
   //     maximumBudget: 2000000
   //   };
-  //   expect(team).toBeTruthy();
-  //   expect(team.name).toBe('Team B');
-  //   expect(team.maximumBudget).toBe(2000000);
+  //   expect(sttudent).toBeTruthy();
+  //   expect(sttudent.name).toBe('sttudent B');
+  //   expect(sttudent.maximumBudget).toBe(2000000);
   // });
 });
